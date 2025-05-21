@@ -1,0 +1,124 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-in animation for headers */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Bounce-in animation for headings */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Footer fade-in and slide-up animation */
+@keyframes footerSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button hover animation */
+@keyframes buttonHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply fade-in effect to sections */
+.firstpage, .secondpag, .thirdpag, .fourthpag, .fifthpag {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Apply slide-in effect to headers */
+.header01, .header02, .header03, .header04 {
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Apply bounce-in effect to headings */
+h1, h2 {
+    animation: bounceIn 1s ease-in-out;
+}
+
+/* Apply slide-up animation to footer */
+footer {
+    animation: footerSlideUp 1s ease-in-out;
+}
+
+/* Button styling */
+button {
+    
+    color: rgb(9, 9, 9);
+    border: none;
+    padding: 15px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+button:hover {
+    animation: buttonHover 0.5s ease-in-out;
+    
+}
+
+/* Navigation hover effects */
+nav ul li a {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Image hover effects */
+img {
+    transition: transform 0.3s ease-in-out;
+}
+img:hover {
+    transform: scale(1.05);
+}

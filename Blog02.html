@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Programming Languages Interest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            border: radious: 50%;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .bar {
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .blog-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .blog-meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .blog-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .blog-content h2 {
+            color: #3498db;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.8rem;
+        }
+
+        .blog-content h3 {
+            color: #2c3e50;
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.4rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .blog-content ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: #2c3e50;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: right 0.3s ease;
+            }
+
+            nav ul.active {
+                right: 0;
+            }
+
+            nav ul li {
+                margin: 1.5rem 0;
+            }
+
+            /* Hamburger to X animation */
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo"><img src="mylogo.png"></div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="blog-header">
+            <h1>The Programming Languages Interest</h1>
+            <div class="blog-meta">
+                Published on April 15, 2025 • 5 min read
+            </div>
+        </div>
+
+        <article class="blog-content">
+            <p>The world of programming is vast and ever-evolving, with programming languages serving as the backbone of technological advancements. From powering websites to driving complex AI systems, the choice of programming language plays a crucial role in determining the efficiency, scalability, and performance of software applications. But what sparks the interest in different programming languages, and why do some rise above the rest?</p>
+
+            <h2>1. The Diversity of Programming Languages</h2>
+            <p>There are hundreds of programming languages in existence, each tailored for specific tasks. While Python excels in simplicity and readability, making it ideal for data science and AI, Java remains a go-to for enterprise applications due to its robustness and platform independence. JavaScript dominates the front-end development space, enabling dynamic, interactive web applications, while C++ powers game development and high-performance applications.</p>
+
+            <h2>2. Factors Driving Programming Language Interest</h2>
+            <p>Several factors contribute to the popularity and interest in programming languages:</p>
+            <ul>
+                <li><strong>Ease of Learning:</strong> Languages like Python and JavaScript attract beginners due to their simple syntax and large communities.</li>
+                <li><strong>Job Market Demand:</strong> The demand for specific skills in the job market significantly influences interest. For example, JavaScript, Python, and Java consistently rank high due to their widespread use in development.</li>
+                <li><strong>Versatility and Application:</strong> Languages that offer versatility across multiple domains, like Python for web, data science, and automation, tend to maintain strong interest.</li>
+                <li><strong>Community and Support:</strong> A strong community provides tutorials, libraries, and frameworks that accelerate learning and application.</li>
+            </ul>
+
+            <h2>3. Emerging Languages and Trends</h2>
+            <p>The tech industry is always evolving, bringing new languages to the forefront. Languages like Rust, Kotlin, and Go are growing rapidly due to their modern features. Rust is praised for its memory safety without garbage collection, making it ideal for system-level programming. Kotlin is becoming the preferred language for Android development, while Go is gaining traction for cloud computing and microservices.</p>
+
+            <h2>4. Future of Programming Languages</h2>
+            <p>The future of programming languages is driven by innovation and adaptability. As AI, IoT, and cloud computing continue to expand, languages that offer high performance, safety, and developer productivity will dominate. New paradigms like quantum computing may also lead to the creation of entirely new languages optimized for massive parallelism and complex calculations.</p>
+
+            <h2>Conclusion</h2>
+            <p>Programming languages are the lifeblood of technological progress. Understanding the factors that drive interest and influence the rise of specific languages can help developers make informed decisions in their careers. Whether learning a language for its simplicity, its demand in the job market, or its cutting-edge features, the interest in programming languages is a key component of growth in the tech industry.</p>
+            <p>Staying updated with the latest trends and emerging technologies will ensure you remain ahead in this ever-evolving field.</p>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 M.K.D.G Thathsarani. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
